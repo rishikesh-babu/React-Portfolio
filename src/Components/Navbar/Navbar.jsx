@@ -24,9 +24,9 @@ export default function Navbar() {
                 {openMenu ? closeIcon : menuIcon}
             </button>
 
-            <section className={`px-5 py-3 text-2xl bg-[#1d3160] flex flex-col gap-3 absolute top-16 right-0 transition-all duration-300 ease-in-out  ${openMenu ? ' opacity-100' : 'opacity-0'}`}>
+            <section className={`px-5 py-3 text-2xl rounded-xl bg-[#1d3160] flex flex-col gap-3 absolute top-16 right-0 transition-all duration-300 ease-in-out  ${openMenu ? 'opacity-80' : 'opacity-0'}`}>
                 {menu?.map((item, index) => (
-                    <a href={item?.link} key={index} onClick={handleMenu} className='  cursor-pointer'>
+                    <a href={item?.link} key={index} onClick={handleMenu} className='cursor-pointer'>
                         {item?.value}
                     </a>
                 ))}
