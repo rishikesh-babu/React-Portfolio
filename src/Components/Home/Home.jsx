@@ -1,18 +1,34 @@
 import React, { useEffect } from 'react'
 import './Home.css'
 import { srd, srm } from '../../ScrolReveal/useScrolReveal';
+import ScrollReveal from 'scrollreveal';
 
 export default function Home() {
     useEffect(() => {
-        srm.reveal('#home-image', { origin: 'top' });
-        srm.reveal('#home-buttons', { origin: 'bottom' });
-        srm.reveal('#home-first', { origin: 'top' });
-        srm.reveal('#home-third', { origin: 'bottom' });
+        const handleReveal = () => {
+            const isMobile = window.innerWidth < 640;
 
-        srd.reveal('#home-image', { origin: 'left' });
-        srd.reveal('#home-first, #home-third', { origin: 'left' });
-        srd.reveal('#home-second', { origin: 'right' });
-        srd.reveal('#home-buttons', { origin: 'bottom' });
+            // Clear any previously applied reveals
+            ScrollReveal().clean('#home-image, #home-buttons, #home-first, #home-second, #home-third');
+
+            if (isMobile) {
+                srm.reveal('#home-image', { origin: 'top' });
+                srm.reveal('#home-buttons', { origin: 'bottom' });
+                srm.reveal('#home-first', { origin: 'top' });
+                srm.reveal('#home-third', { origin: 'bottom' });
+                // ⛔ Do NOT animate #home-second on mobile
+            } else {
+                srd.reveal('#home-image', { origin: 'left' });
+                srd.reveal('#home-buttons', { origin: 'bottom' });
+                srd.reveal('#home-first, #home-third', { origin: 'left' });
+                srd.reveal('#home-second', { origin: 'right' });
+            }
+        };
+
+        handleReveal(); // Run on mount
+        window.addEventListener('resize', handleReveal); // Re-run on resize
+
+        return () => window.removeEventListener('resize', handleReveal); // Cleanup
     }, []);
 
     return (
@@ -21,7 +37,7 @@ export default function Home() {
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
-                    <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu s</div>
+                    <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
                     <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl sm:text-2xl'>Web Developer</span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
