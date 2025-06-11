@@ -15,7 +15,7 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='p-3 w-full fixed bg-[#16223f] flex justify-between'>
+        <div className='p-3 w-full fixed bg-[#14193f] flex justify-between'>
             <span className=' text-4xl select-none'>
                 Portfolio
             </span>
