@@ -20,7 +20,7 @@ export default function Contact() {
         },
     ]
     return (
-        <div id='contact' className='bg-[#243d61] py-10'>
+        <div id='contact' className='min-h-screen bg-[#243d61] py-10'>
             <div className='text-4xl text-center text-[#00ffff] font-bold'>
                 Contact Me
             </div>
