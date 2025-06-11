@@ -3,17 +3,17 @@ import './Home.css'
 import { srd, srm } from '../../ScrolReveal/useScrolReveal';
 
 export default function Home() {
- useEffect(() => {
-    srm.reveal('#home-image', { origin: 'top'});
-    srm.reveal('#home-buttons', { origin: 'bottom' });
-    srm.reveal('#home-first', { origin: 'top' });
-    srm.reveal('#home-third', { origin: 'bottom' });
+    useEffect(() => {
+        srm.reveal('#home-image', { origin: 'top' });
+        srm.reveal('#home-buttons', { origin: 'bottom' });
+        srm.reveal('#home-first', { origin: 'top' });
+        srm.reveal('#home-third', { origin: 'bottom' });
 
-    srd.reveal('#home-image', { origin: 'left' });
-    srd.reveal('#home-first, #home-third', { origin: 'left' });
-    srd.reveal('#home-second', { origin: 'right'});
-    srd.reveal('#home-buttons', { origin: 'bottom'});
-}, []);
+        srd.reveal('#home-image', { origin: 'left' });
+        srd.reveal('#home-first, #home-third', { origin: 'left' });
+        srd.reveal('#home-second', { origin: 'right' });
+        srd.reveal('#home-buttons', { origin: 'bottom' });
+    }, []);
 
     return (
         <div id='home' className='min-h-[90vh] bg-[#172342] flex flex-col sm:flex-row justify-evenly items-center'>

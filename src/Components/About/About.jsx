@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { srd, srm } from "../../ScrolReveal/useScrolReveal";
 
 export default function About() {
+    useEffect(() => {
+        srm.reveal('#about-heading', { origin: 'top' })
+        srm.reveal('#about-image', { origin: 'bottom' })
+
+        srd.reveal('#about-heading', { origin: 'top' })
+    }, [])
     return (
         <div id="about" className="py-10 bg-[#243d61] ">
-            <div className="mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] ">
+            <div id="about-heading" className="mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] ">
                 ABOUT ME
             </div>
 
             <div className="px-4 max-w-5xl m-auto flex flex-col lg:flex-row-reverse justify-center items-center">
                 <img
+                    id="about-image"
                     src="/profile2.jpg"
                     alt="photo"
                     className="size-60 object-cover flex justify-center items-center rounded-full border-4 border-[#00ffff] shadow-[0px_0px_100px_#00ffff80]"
