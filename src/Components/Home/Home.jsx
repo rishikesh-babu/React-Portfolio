@@ -12,13 +12,13 @@ export default function Home() {
             ScrollReveal().clean('#home-image, #home-buttons, #home-first, #home-second, #home-third');
 
             if (isMobile) {
-                srm.reveal('#home-image', { origin: 'top' });
+                srm.reveal('#home-image-container', { origin: 'top' });
                 srm.reveal('#home-buttons', { origin: 'bottom' });
                 srm.reveal('#home-first', { origin: 'top' });
                 srm.reveal('#home-third', { origin: 'bottom' });
                 // ⛔ Do NOT animate #home-second on mobile
             } else {
-                srd.reveal('#home-image', { origin: 'left' });
+                srd.reveal('#home-image-container', { origin: 'left' });
                 srd.reveal('#home-buttons', { origin: 'bottom' });
                 srd.reveal('#home-first, #home-third', { origin: 'left' });
                 srd.reveal('#home-second', { origin: 'right' });
@@ -33,7 +33,9 @@ export default function Home() {
 
     return (
         <div id='home' className='min-h-[90vh] bg-[#172342] flex flex-col sm:flex-row justify-evenly items-center'>
-            <img id='home-image' src="/profile1.jpg" alt="profile" className='size-64 border-3 border-[#00ffff] rounded-full object-cover shadow-[0px_0px_100px_#00ffff80] ' />
+            <div id="home-image-container">
+                <img id='home-image' src="/profile1.jpg" alt="profile" className='size-64 border-3 border-[#00ffff] rounded-full object-cover shadow-[0px_0px_100px_#00ffff80] ' />
+            </div>
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
