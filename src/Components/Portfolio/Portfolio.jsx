@@ -4,7 +4,7 @@ import { srd, srm } from '../../ScrolReveal/useScrolReveal'
 export default function Portfolio() {
 
     useEffect(() => {
-        // srm.reveal('#portfolio-heading', { origin: 'top' })
+        srm.reveal('#portfolio-heading', { origin: 'top' })
         srm.reveal('#portfolio-project', { origin: 'bottom' })
         
         srd.reveal('#portfolio-heading', { origin: 'top' })
