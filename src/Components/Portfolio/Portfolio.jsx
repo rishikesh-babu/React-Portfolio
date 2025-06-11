@@ -43,7 +43,7 @@ export default function Portfolio() {
                         <div className='w-full flex flex-row justify-around gap-2'>
                             <a
                                 href={item?.github}
-                                target="_blank"
+                                target={item?.github ?? '_blank'}
                                 rel="noopener noreferrer"
                                 className="px-4 py-2 font-semibold text-nowrap rounded-full bg-gradient-to-r from-[#6b7280] to-[#374151] transition-all duration-300 hover:scale-105 hover:shadow-[-1px_0px_7px_#00ffff] "
                             >
@@ -52,7 +52,7 @@ export default function Portfolio() {
 
                             <a
                                 href={item?.live}
-                                target='_blank'
+                                target={item?.github ?? '_blank'}
                                 className="px-4 py-2 font-semibold text-nowrap rounded-full bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] transition-all duration-300 hover:scale-105 hover:shadow-[-1px_0px_7px_#00ffff] "
                             >
                                 Live Demo
