@@ -25,7 +25,7 @@ export default function Contact() {
                 Contact Me
             </div>
 
-            <div class="py-10 flex justify-center gap-10 text-2xl text-[#00ffff] ">
+            <div className="py-10 flex justify-center gap-10 text-2xl text-[#00ffff] ">
                 {
                     social?.map((item, index) => (
                         <a key={index} href={item?.link} target={item?.link ?? '_blank'} className={`${item?.class} transition-all duration-300 hover:scale-120 hover:text-[#3563ff]`}></a>
@@ -40,13 +40,13 @@ export default function Contact() {
                     className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
                 />
                 <input
-                    type="text"
-                    placeholder='Enter the name'
+                    type="email"
+                    placeholder='Enter the email'
                     className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
                 />
                 <textarea
                     type="text"
-                    placeholder='Enter the name'
+                    placeholder='Enter the message'
                     className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
                 />
                 <button type='submit' className='border w-full py-3 text-black text-xl font-semibold bg-[#00ffff] rounded-lg'>

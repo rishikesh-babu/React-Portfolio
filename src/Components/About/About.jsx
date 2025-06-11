@@ -7,16 +7,16 @@ export default function About() {
                 ABOUT ME
             </div>
 
-            <div className="flex flex-col sm: justify-center items-center">
+            <div className="px-4 max-w-5xl m-auto flex flex-col lg:flex-row-reverse justify-center items-center">
                 <img
                     src="/profile2.jpg"
                     alt="photo"
-                    className="size-60 object-cover border-3 border-[#00ffff] rounded-full "
+                    className="size-60 object-cover flex justify-center items-center rounded-full border-4 border-[#00ffff] shadow-[0px_0px_100px_#00ffff80]"
                 />
 
-                <div className="mt-8 px-7 flex flex-col gap-5">
+                <div className="flex-1 mt-8 px-7 flex flex-col gap-5">
                     <span className="text-3xl text-[#00ffff] font-bold ">Web Developer</span>
-                    <div className="text-lg leading-9 tracking-[1px] font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
+                    <div className="text-lg leading-9 tracking-[1px] text-wrap font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
                         Hello! My name is Rishikesh Babu, and I am a Full Stack Developer
                         with a keen interest in creating innovative and user-friendly
                         applications. Over the course of my career, I’ve developed a variety

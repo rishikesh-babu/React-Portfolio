@@ -3,7 +3,7 @@ import './Home.css'
 
 export default function Home() {
     return (
-        <div id='home' className='min-h-[90vh] bg-[#172342] flex flex-col sm:flex-row-reverse justify-evenly items-center'>
+        <div id='home' className='min-h-[90vh] bg-[#172342] flex flex-col sm:flex-row justify-evenly items-center'>
             <img id='home-image' src="/profile1.jpg" alt="profile" className='size-64 border-3 border-[#00ffff] rounded-full object-cover shadow-[0px_0px_100px_#00ffff80] ' />
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
