@@ -21,7 +21,7 @@ export default function Home() {
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
-                    <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
+                    <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu s</div>
                     <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl sm:text-2xl'>Web Developer</span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>

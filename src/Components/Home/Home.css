@@ -1,5 +1,5 @@
 #home-image {
-    animation: floatImage 4s ease-in-out infinite;
+    /* animation: floatImage 4s ease-in-out infinite; */
 }
 
 @keyframes floatImage { 
