@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Home.css'
 import { srd, srm } from '../../ScrolReveal/useScrolReveal';
 import ScrollReveal from 'scrollreveal';
+import Typed from 'typed.js';
 
 export default function Home() {
     useEffect(() => {
@@ -31,6 +32,20 @@ export default function Home() {
         return () => window.removeEventListener('resize', handleReveal); // Cleanup
     }, []);
 
+    useEffect(() => {
+        const typed = new Typed('#home-multi-text', {
+            strings: ['Web Developer', 'Frontend Developer', 'Backend Developer'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        })
+        return () => {
+            // Destroy Typed instance during cleanup to stop animation
+            typed.destroy();
+        };
+    }, [])
+
     return (
         <div id='home' className='min-h-[90vh] bg-[#172342] flex flex-col sm:flex-row justify-evenly items-center'>
             <div id="home-image-container">
@@ -40,7 +55,7 @@ export default function Home() {
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
                     <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
-                    <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl sm:text-2xl'>Web Developer</span></div>
+                    <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl sm:text-2xl'></span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
                     <button className='px-5 py-2 text-black text-lg sm:text-2xl text-nowrap font-bold rounded-xl bg-gradient-to-r from-[#00ffff] to-[#00ff99] shadow-[0px_0px_10px_#00ffff] transition-all duration-300 hover:shadow-[0px_0px_20px_#00ffff] hover:scale-105 '>
