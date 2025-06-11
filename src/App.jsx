@@ -6,7 +6,7 @@ import Portfolio from "./Components/Portfolio/Portfolio"
 
 function App() {
     return (
-        <div className="font-mono">
+        <div className="font-mono  text-white">
             <Navbar />
             <main className="pt-[4rem]">
                 <Home />

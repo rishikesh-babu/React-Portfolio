@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Navbar() {
-    const [openMenu, setOpenMenu] = useState(true)
+    const [openMenu, setOpenMenu] = useState(false)
 
     function handleMenu() {
         setOpenMenu(!openMenu)
@@ -15,7 +15,7 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='p-3 w-full fixed text-white bg-[#16223f] flex justify-between'>
+        <div className='p-3 w-full fixed bg-[#16223f] flex justify-between'>
             <span className=' text-4xl select-none'>
                 Portfolio
             </span>
@@ -24,7 +24,7 @@ export default function Navbar() {
                 {openMenu ? closeIcon : menuIcon}
             </button>
 
-            <section className={`px-5 py-3 text-2xl bg-[#1d3160] border flex flex-col gap-3 absolute top-16 right-0 transition-all duration-300 ease-in-out  ${openMenu ? ' opacity-100' : 'opacity-0'}`}>
+            <section className={`px-5 py-3 text-2xl bg-[#1d3160] flex flex-col gap-3 absolute top-16 right-0 transition-all duration-300 ease-in-out  ${openMenu ? ' opacity-100' : 'opacity-0'}`}>
                 {menu?.map((item, index) => (
                     <a href={item?.link} key={index} onClick={handleMenu} className='  cursor-pointer'>
                         {item?.value}
