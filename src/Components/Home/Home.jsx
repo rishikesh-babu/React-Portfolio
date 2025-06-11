@@ -8,7 +8,7 @@ export default function Home() {
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div className='text-xl text-center'>Hello It's me</div>
-                    <div className='text-center text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
+                    <div className='text-center text-3xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
                     <div className='text-xl text-center sm:text-left'>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl'>Web Developer</span></div>
                 </div>
                 <div className='flex justify-around gap-4 select-none'>
