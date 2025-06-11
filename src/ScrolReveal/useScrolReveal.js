@@ -1,10 +1,21 @@
 import ScrollReveal from "scrollreveal"
 
-const sr = ScrollReveal({
+const srm = ScrollReveal({
     distance: '50px',
     duration: 1000,
     reset: true,
-    delay: 300,
+    delay: 500,
+    // desktop: false,
+    // mobile: true
 })
 
-export default sr
+const srd = ScrollReveal({
+    distance: '50px',
+    duration: 1000,
+    reset: true,
+    delay: 500,
+    // mobile: false,
+    // desktop: true,
+})
+
+export { srm, srd }
