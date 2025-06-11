@@ -1,1 +1,4 @@
+html {
+    scroll-padding-top: 4rem;
+}
 @import "tailwindcss";
