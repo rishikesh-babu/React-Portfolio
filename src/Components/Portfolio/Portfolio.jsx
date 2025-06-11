@@ -36,7 +36,7 @@ export default function Portfolio() {
                     <div key={index} className='p-6 w-[250px] bg-[#23334e] flex flex-col justify-between items-center gap-3 rounded-4xl transition-all duration-300 hover:shadow-[0px_2px_10px_#00ffff] '>
                         <img src={item?.image} alt="image" className='w-full h-[200px] object-cover object-[0px_0px] border-3 border-[#00ffff] rounded-3xl ' />
                         
-                        <div className='text-xl font-semibold text-[#00ffff]'>
+                        <div className='text-xl font-extrabold text-[#00ffff]'>
                             {item?.name}
                         </div>
 
