@@ -7,7 +7,7 @@ export default function About() {
                 ABOUT ME
             </div>
 
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col sm: justify-center items-center">
                 <img
                     src="/profile2.jpg"
                     alt="photo"
