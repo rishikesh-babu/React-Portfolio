@@ -1,0 +1,18 @@
+#menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00FFFF;
+    transition: width 0.3s ease;
+}
+
+#menu a:hover {
+    color: #00FFFF;
+}
+
+#menu a:hover::after {
+    width: 100%;
+}

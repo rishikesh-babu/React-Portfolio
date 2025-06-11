@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Navbar.css'
 
 export default function Navbar() {
     const [openMenu, setOpenMenu] = useState(false)
@@ -15,21 +16,23 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='p-3 w-full fixed bg-[#14193f] flex justify-between'>
+        <div className='p-3 w-full fixed bg-[#14193f] flex justify-between items-center'>
             <span className=' text-4xl select-none'>
                 Portfolio
             </span>
 
-            <button onClick={handleMenu} className='select-none cursor-pointer'>
+            <button onClick={handleMenu} className={`select-none cursor-pointer sm:hidden`}>
                 {openMenu ? closeIcon : menuIcon}
             </button>
 
-            <section className={`px-5 py-3 text-2xl rounded-xl bg-[#1d3160] flex flex-col gap-3 absolute top-16 right-0 transition-all duration-300 ease-in-out  ${openMenu ? 'opacity-85' : 'opacity-0'}`}>
-                {menu?.map((item, index) => (
-                    <a href={item?.link} key={index} onClick={handleMenu} className='cursor-pointer'>
-                        {item?.value}
-                    </a>
-                ))}
+            <section id='menu' className={`px-5 py-3 text-2xl rounded-xl bg-[#1d3160] sm:bg-transparent absolute sm:relative top-16 sm:top-0 right-0 transition-all duration-300 ease-in-out  ${openMenu ? 'opacity-85 pointer-events-auto' : 'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto'}`}>
+                <div className=' flex flex-col sm:flex-row justify-center gap-3'>
+                    {menu?.map((item, index) => (
+                        <a href={item?.link} key={index} onClick={handleMenu} className='cursor-pointer relative'>
+                            {item?.value}
+                        </a>
+                    ))}
+                </div>
             </section>
         </div>
     )
