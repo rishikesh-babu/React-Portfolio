@@ -1,10 +1,10 @@
 import ScrollReveal from "scrollreveal"
 
 const srm = ScrollReveal({
-    distance: '50px',
+    distance: '20px',
     duration: 1000,
     reset: true,
-    delay: 300,
+    delay: 800,
 });
 
 const srd = ScrollReveal({

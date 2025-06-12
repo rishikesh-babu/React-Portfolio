@@ -6,7 +6,7 @@ import Portfolio from "./Components/Portfolio/Portfolio"
 
 function App() {
     return (
-        <div className="font-mono text-white">
+        <div className="font-mono text-white overflow-hidden">
             <div className='w-full fixed bg-[#14193f] flex justify-between z-50'>
                 <Navbar />
             </div>

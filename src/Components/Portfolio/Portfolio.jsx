@@ -13,7 +13,6 @@ export default function Portfolio() {
             srm.reveal('#', { origin: 'top' })
             srm.reveal('#portfolio-project', { origin: 'bottom' })
         } else {
-
             srd.reveal('#portfolio-heading', { origin: 'top' })
             srd.reveal('#portfolio-project', { origin: 'bottom' })
         }
