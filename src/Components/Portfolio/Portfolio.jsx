@@ -1,18 +1,33 @@
 import React, { useEffect } from 'react'
-import { srd, srm } from '../../ScrolReveal/useScrolReveal'
 import ScrollReveal from 'scrollreveal';
-export default function Portfolio() {
 
+export default function Portfolio() {
     useEffect(() => {
         const isMobile = window.innerWidth < 640;
 
         // Clean previous reveals
         ScrollReveal().clean('#portfolio-heading, #portfolio-project');
 
+        
+        
         if (isMobile) {
-            srm.reveal('#', { origin: 'top' })
+            const srm = ScrollReveal({
+                distance: '20px',
+                duration: 1000,
+                reset: true,
+                delay: 300,
+            });
+            
+            srm.reveal('#portfolio-heading', { origin: 'top' })
             srm.reveal('#portfolio-project', { origin: 'bottom' })
         } else {
+            const srd = ScrollReveal({
+                distance: '50px',
+                duration: 1000,
+                reset: true,
+                delay: 300,
+            });
+
             srd.reveal('#portfolio-heading', { origin: 'top' })
             srd.reveal('#portfolio-project', { origin: 'bottom' })
         }

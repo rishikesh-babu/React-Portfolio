@@ -1,34 +1,48 @@
 import React, { useEffect } from 'react'
 import './Home.css'
-import { srd, srm } from '../../ScrolReveal/useScrolReveal';
 import ScrollReveal from 'scrollreveal';
 import Typed from 'typed.js';
+
 
 export default function Home() {
     useEffect(() => {
         const handleReveal = () => {
             const isMobile = window.innerWidth < 640;
 
-            // Clear any previously applied reveals
-            ScrollReveal().clean('#home-image, #home-buttons, #home-first, #home-second, #home-third');
+            ScrollReveal().clean('#home-image-container, #home-buttons, #home-first, #home-second, #home-third');
 
             if (isMobile) {
-                srm.reveal('#home-image-container', { origin: 'top' });
-                srm.reveal('#home-buttons', { origin: 'bottom' });
-                srm.reveal('#home-first', { origin: 'top' });
-                srm.reveal('#home-third', { origin: 'bottom' });
+                const srm = ScrollReveal({
+                    distance: "20px",
+                    duration: 1000,
+                    reset: true,
+                    delay: 300,
+                });
+
+                srm.reveal("#home-image-container", { origin: "top" });
+                srm.reveal("#home-buttons", { origin: "bottom" });
+                srm.reveal("#home-first", { origin: "top" });
+                srm.reveal("#home-third", { origin: "bottom" });
             } else {
-                srd.reveal('#home-image-container', { origin: 'left' });
-                srd.reveal('#home-buttons', { origin: 'bottom' });
-                srd.reveal('#home-first, #home-third', { origin: 'left' });
-                srd.reveal('#home-second', { origin: 'right' });
+                const srd = ScrollReveal({
+                    distance: "50px",
+                    duration: 1000,
+                    reset: true,
+                    delay: 300,
+                });
+
+                srd.reveal("#home-image-container", { origin: "left" });
+                srd.reveal("#home-buttons", { origin: "bottom" });
+                srd.reveal("#home-first, #home-third", { origin: "left" });
+                srd.reveal("#home-second", { origin: "right" });
             }
         };
 
-        handleReveal(); // Run on mount
-        window.addEventListener('resize', handleReveal); // Re-run on resize
+        handleReveal(); // run on mount
 
-        return () => window.removeEventListener('resize', handleReveal); // Cleanup
+        // Optional: run on screen resize
+        window.addEventListener('resize', handleReveal);
+        return () => window.removeEventListener('resize', handleReveal);
     }, []);
 
     useEffect(() => {

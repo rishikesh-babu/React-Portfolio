@@ -1,21 +1,34 @@
 import React, { useEffect } from "react";
-import { srd, srm } from "../../ScrolReveal/useScrolReveal";
 import ScrollReveal from "scrollreveal";
 
 export default function About() {
-   useEffect(() => {
-    const isMobile = window.innerWidth < 640;
+    useEffect(() => {
+        const isMobile = window.innerWidth < 640;
 
-    // Clean previous reveals
-    ScrollReveal().clean('#about-heading, #about-image');
+        // Clean previous reveals
+        ScrollReveal().clean('#about-heading, #about-image');
 
-    if (isMobile) {
-        srm.reveal('#about-heading', { origin: 'top' });
-        srm.reveal('#about-image', { origin: 'bottom' });
-    } else {
-        srd.reveal('#about-heading', { origin: 'top' });
-    }
-}, []);
+        if (isMobile) {
+            const srm = ScrollReveal({
+                distance: "20px",
+                duration: 1000,
+                reset: true,
+                delay: 300,
+            });
+
+            srm.reveal("#about-heading", { origin: "top" });
+            srm.reveal("#about-image", { origin: "bottom" });
+        } else {
+            const srd = ScrollReveal({
+                distance: "50px",
+                duration: 1000,
+                reset: true,
+                delay: 300,
+            });
+
+            srd.reveal("#about-heading", { origin: "top" });
+        }
+    }, []);
 
     return (
         <div id="about" className="py-10 bg-[#243d61] ">
