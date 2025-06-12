@@ -13,3 +13,29 @@
         transform: translateY(0px);
     }
 }
+
+#home-second {
+    position: relative;
+    overflow: hidden;
+}
+
+#home-second::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: aqua;
+    transform: translateX(-100%);
+    animation: underlineSweep  4s ease-in-out infinite;
+}
+
+@keyframes underlineSweep  {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}

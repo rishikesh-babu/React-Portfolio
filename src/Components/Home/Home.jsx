@@ -12,17 +12,17 @@ export default function Home() {
             ScrollReveal().clean('#home-image-container, #home-buttons, #home-first, #home-second, #home-third');
 
             if (isMobile) {
-                const srm = ScrollReveal({
-                    distance: "20px",
-                    duration: 1000,
-                    reset: true,
-                    delay: 300,
-                });
+                // const srm = ScrollReveal({
+                //     distance: "20px",
+                //     duration: 1000,
+                //     reset: true,
+                //     delay: 300,
+                // });
 
-                srm.reveal("#home-image-container", { origin: "top" });
-                srm.reveal("#home-buttons", { origin: "bottom" });
-                srm.reveal("#home-first", { origin: "top" });
-                srm.reveal("#home-third", { origin: "bottom" });
+                // srm.reveal("#home-image-container", { origin: "top" });
+                // srm.reveal("#home-buttons", { origin: "bottom" });
+                // srm.reveal("#home-first", { origin: "top" });
+                // srm.reveal("#home-third", { origin: "bottom" });
             } else {
                 const srd = ScrollReveal({
                     distance: "50px",
@@ -30,7 +30,7 @@ export default function Home() {
                     reset: true,
                     delay: 300,
                 });
-
+    
                 srd.reveal("#home-image-container", { origin: "left" });
                 srd.reveal("#home-buttons", { origin: "bottom" });
                 srd.reveal("#home-first, #home-third", { origin: "left" });
@@ -67,7 +67,7 @@ export default function Home() {
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap'>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
-                    <div id='home-second' className='text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
+                    <div id='home-second' className='w-fit mx-auto text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
                     <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl font-extrabold sm:text-2xl'></span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
