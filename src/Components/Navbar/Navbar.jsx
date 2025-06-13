@@ -26,7 +26,7 @@ export default function Navbar() {
             </button>
 
             <section id='menu' className={`px-5 py-3 text-2xl rounded-xl bg-[#1d3160] sm:bg-transparent absolute sm:relative top-16 sm:top-0 right-0 transition-all duration-300 ease-in-out  ${openMenu ? 'opacity-85 pointer-events-auto' : 'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto'}`}>
-                <div className=' flex flex-col sm:flex-row justify-center gap-3'>
+                <div className=' flex flex-col sm:flex-row justify-center gap-3 sm:gap-7'>
                     {menu?.map((item, index) => (
                         <a href={item?.link} key={index} onClick={handleMenu} className='cursor-pointer relative'>
                             {item?.value}

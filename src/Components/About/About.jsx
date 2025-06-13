@@ -31,7 +31,7 @@ export default function About() {
     }, []);
 
     return (
-        <div id="about" className="py-10 bg-[#243d61] ">
+        <div id="about" className="py-10 min-h-[100vh] bg-[#243d61] ">
             <div id="about-heading" className="mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] ">
                 ABOUT ME
             </div>
@@ -47,7 +47,7 @@ export default function About() {
                 <div className="flex-1 mt-8 px-7 flex flex-col gap-5">
                     <span className="text-3xl text-[#00ffff] font-bold ">Web Developer</span>
                     <div className="text-lg leading-9 tracking-[1px] text-wrap font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
-                        Hello! My name is Rishikesh Babu, and I am a Full Stack Developer
+                        Hello! My name is <i className="text-[#00ffff] font-bold">Rishikesh Babu</i> , and I am a Full Stack Developer
                         with a keen interest in creating innovative and user-friendly
                         applications. Over the course of my career, I’ve developed a variety
                         of projects, including a validation form, an online calculator, and

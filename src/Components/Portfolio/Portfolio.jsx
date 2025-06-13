@@ -20,7 +20,7 @@ export default function Portfolio() {
             srm.reveal('#portfolio-project', { origin: 'bottom' })
         } else {
             const srd = ScrollReveal({
-                distance: '50px',
+                distance: '40px',
                 duration: 1000,
                 reset: true,
                 delay: 300,
@@ -58,10 +58,10 @@ export default function Portfolio() {
         },
     ]
     return (
-        <div id='portfolio' className='py-10 min-h-screen bg-[#172342]'>
+        <div id='portfolio' className='py-10 min-h-screen bg-[#172342] '>
             <div id='portfolio-heading' className='mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] '>Latest Projects</div>
 
-            <div className=' flex flex-wrap justify-center gap-7'>
+            <div className='flex flex-wrap justify-center gap-7 sm:gap-15'>
                 {projects?.map((item, index) => (
                     <div id='portfolio-project' key={index} className='p-6 w-[250px] bg-[#23334e] flex flex-col justify-between items-center gap-3 rounded-4xl transition-all duration-300 hover:shadow-[0px_2px_10px_#00ffff] '>
                         <img src={item?.image} alt="image" className='w-full h-[200px] object-cover object-[0px_0px] border-3 border-[#00ffff] rounded-3xl ' />
