@@ -35,27 +35,33 @@ export default function Portfolio() {
         {
             image: '/food-express.png',
             name: 'Food Express',
-            github: '',
-            live: ''
+            github: 'https://github.com/rishikesh-babu/Food-Ordering-Website.git',
+            live: 'https://food-express-frontend-yyuz.onrender.com/'
         },
         {
             image: '/weather-app.png',
             name: 'Weather App',
-            github: '',
-            live: ''
+            github: 'https://github.com/rishikesh-babu/Weather-App-React.git',
+            live: 'https://weather-app-react-jclg.onrender.com/'
         },
         {
             image: '/tic-tac-toe.png',
             name: 'Tic Tac Toe Game',
-            github: '',
-            live: ''
+            github: 'https://github.com/rishikesh-babu/Tic-Tac-Toe.git',
+            live: 'https://tic-tac-toe-59kn.onrender.com/'
         },
         {
             image: '/todo.png',
             name: 'To Do App',
-            github: '',
-            live: ''
+            github: 'https://github.com/rishikesh-babu/Todo-List.git',
+            live: 'https://to-do-1cf2.onrender.com/'
         },
+        {
+            image: 'login-demo.png', 
+            name: 'Login Demo', 
+            github: 'https://github.com/rishikesh-babu/Firebase-Sample.git', 
+            live: 'https://firebase-login-o2pi.onrender.com/login'
+        }
     ]
     return (
         <div id='portfolio' className='py-10 min-h-screen bg-[#172342] '>
@@ -85,7 +91,7 @@ export default function Portfolio() {
                                 target={item?.github ?? '_blank'}
                                 className="px-4 py-2 font-semibold text-nowrap rounded-full bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] transition-all duration-300 hover:scale-105 hover:shadow-[-1px_0px_7px_#00ffff] "
                             >
-                                Live Demo
+                                Live Demo 
 
                             </a>
                         </div>
