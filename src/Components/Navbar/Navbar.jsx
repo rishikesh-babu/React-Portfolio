@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Navbar.css'
 
 export default function Navbar() {
     const [openMenu, setOpenMenu] = useState(false)
@@ -16,24 +15,37 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='p-3 w-full fixed bg-[#14193f] flex justify-between items-center'>
-            <span className=' text-4xl select-none'>
+        <div className='flex justify-between items-center py-4 px-5 max-w-[1200px] mx-auto'>
+            <span className='text-3xl font-extrabold select-none tracking-wide text-gradient'>
                 Portfolio
             </span>
 
-            <button onClick={handleMenu} className={`select-none cursor-pointer sm:hidden`}>
+            <button onClick={handleMenu} className='sm:hidden bg-transparent border-none cursor-pointer text-text-primary'>
                 {openMenu ? closeIcon : menuIcon}
             </button>
 
-            <section id='menu' className={`px-5 py-3 text-2xl rounded-xl bg-[#1d3160] sm:bg-transparent absolute sm:relative top-16 sm:top-0 right-0 transition-all duration-300 ease-in-out  ${openMenu ? 'opacity-85 pointer-events-auto' : 'opacity-0 sm:opacity-100 pointer-events-none sm:pointer-events-auto'}`}>
-                <div className=' flex flex-col sm:flex-row justify-center gap-3 sm:gap-7'>
+            <nav id='menu' className={`
+                absolute sm:static top-full right-0 w-full sm:w-auto
+                bg-[#0a0a0f]/95 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none
+                p-6 sm:p-0 border-b border-white/10 sm:border-none
+                transition-all duration-300 ease-in-out
+                ${openMenu ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-2'}
+                sm:opacity-100 sm:pointer-events-auto sm:translate-y-0
+            `}>
+                <div className='flex flex-col sm:flex-row items-center gap-6 sm:gap-8'>
                     {menu?.map((item, index) => (
-                        <a href={item?.link} key={index} onClick={handleMenu} className='cursor-pointer relative'>
+                        <a href={item?.link} key={index} onClick={handleMenu} className='
+                            text-[1.1rem] font-medium text-text-primary no-underline relative transition-colors duration-300 
+                            hover:text-accent-cyan 
+                            after:content-[""] after:absolute after:w-0 after:h-[2px] after:bottom-[-4px] after:left-0 
+                            after:bg-gradient-to-r after:from-accent-cyan after:to-accent-purple 
+                            after:transition-all after:duration-300 hover:after:w-full rounded-sm
+                        '>
                             {item?.value}
                         </a>
                     ))}
                 </div>
-            </section>
+            </nav>
         </div>
     )
 }

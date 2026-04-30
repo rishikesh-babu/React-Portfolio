@@ -5,30 +5,17 @@ export default function Portfolio() {
     useEffect(() => {
         const isMobile = window.innerWidth < 640;
 
-        // Clean previous reveals
-        ScrollReveal().clean('#portfolio-heading, #portfolio-project');
+        ScrollReveal().clean('#portfolio-heading, .portfolio-card');
 
-        if (isMobile) {
-            const srm = ScrollReveal({
-                distance: '20px',
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
+        const sr = ScrollReveal({
+            distance: isMobile ? '20px' : '40px',
+            duration: 1000,
+            reset: true,
+            delay: 300,
+        });
 
-            srm.reveal('#portfolio-heading', { origin: 'top' })
-            srm.reveal('#portfolio-project', { origin: 'bottom' })
-        } else {
-            const srd = ScrollReveal({
-                distance: '40px',
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
-
-            srd.reveal('#portfolio-heading', { origin: 'top' })
-            srd.reveal('#portfolio-project', { origin: 'bottom' })
-        }
+        sr.reveal('#portfolio-heading', { origin: 'top' })
+        sr.reveal('.portfolio-card', { origin: 'bottom', interval: 100 })
     }, [])
 
     const projects = [
@@ -64,40 +51,44 @@ export default function Portfolio() {
         }
     ]
     return (
-        <div id='portfolio' className='py-10 min-h-screen bg-[#172342] '>
-            <div id='portfolio-heading' className='mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] '>Latest Projects</div>
+        <section id='portfolio' className='py-24 min-h-screen max-w-[1200px] mx-auto px-5'>
+            <h2 id='portfolio-heading' className='text-[2.5rem] font-bold text-center mb-12 relative inline-block mx-auto text-gradient after:content-[""] after:absolute after:-bottom-2.5 after:left-[20%] after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-accent-cyan after:to-accent-purple after:rounded-sm'>
+                Latest Projects
+            </h2>
 
-            <div className='flex flex-wrap justify-center gap-7 sm:gap-15'>
+            <div className='grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-10 py-4'>
                 {projects?.map((item, index) => (
-                    <div id='portfolio-project' key={index} className='p-6 w-[250px] bg-[#23334e] flex flex-col justify-between items-center gap-3 rounded-4xl transition-all duration-300 hover:shadow-[0px_2px_10px_#00ffff] '>
-                        <img src={item?.image} alt="image" className='w-full h-[200px] object-cover object-[0px_0px] border-3 border-[#00ffff] rounded-3xl ' />
-
-                        <div className='text-xl font-extrabold text-[#00ffff]'>
-                            {item?.name}
+                    <div key={index} className='portfolio-card overflow-hidden transition-transform duration-300 flex flex-col group hover:-translate-y-2.5 hover:shadow-[0_15px_30px_rgba(0,240,255,0.15)] glass-panel !p-0'>
+                        <div className='relative w-full h-[220px] overflow-hidden border-b border-glass-border'>
+                            <img src={item?.image} alt={item?.name} className='w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110' />
+                            <div className='absolute inset-0 w-full h-full bg-[#05050a]/85 backdrop-blur-[4px] flex justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+                                <div className='flex gap-4 translate-y-5 transition-transform duration-300 group-hover:translate-y-0'>
+                                    <a
+                                        href={item?.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="py-2 px-4 rounded-full text-[0.9rem] font-semibold no-underline text-white transition-all duration-300 bg-gradient-to-r from-gray-600 to-gray-800 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                                    >
+                                        GitHub
+                                    </a>
+                                    <a
+                                        href={item?.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="py-2 px-4 rounded-full text-[0.9rem] font-semibold no-underline text-white transition-all duration-300 bg-gradient-to-r from-accent-cyan to-accent-purple hover:shadow-[0_0_15px_rgba(0,240,255,0.5)]"
+                                    >
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className='w-full flex flex-row justify-around gap-2'>
-                            <a
-                                href={item?.github}
-                                target={item?.github ?? '_blank'}
-                                rel="noopener noreferrer"
-                                className="px-4 py-2 font-semibold text-nowrap rounded-full bg-gradient-to-r from-[#6b7280] to-[#374151] transition-all duration-300 hover:scale-105 hover:shadow-[-1px_0px_7px_#00ffff] "
-                            >
-                                GitHub
-                            </a>
-
-                            <a
-                                href={item?.live}
-                                target={item?.github ?? '_blank'}
-                                className="px-4 py-2 font-semibold text-nowrap rounded-full bg-gradient-to-r from-[#06b6d4] to-[#3b82f6] transition-all duration-300 hover:scale-105 hover:shadow-[-1px_0px_7px_#00ffff] "
-                            >
-                                Live Demo 
-
-                            </a>
+                        <div className='p-6 text-center bg-black/20'>
+                            <h3 className='text-[1.3rem] font-bold text-text-primary'>{item?.name}</h3>
                         </div>
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }

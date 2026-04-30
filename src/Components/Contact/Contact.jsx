@@ -1,5 +1,4 @@
 import React from 'react'
-import './Contact.css'
 
 export default function Contact() {
     const social = [
@@ -26,24 +25,22 @@ export default function Contact() {
     ]
 
     return (
-        <div id="contact" className="min-h-[90dvh] bg-[#243d61] py-10">
-            <div className="text-4xl text-center text-[#00ffff] font-bold">
+        <section id="contact" className="py-24 min-h-[90vh] max-w-[1200px] mx-auto px-5">
+            <h2 className="text-[2.5rem] font-bold text-center mb-12 relative inline-block mx-auto text-gradient after:content-[''] after:absolute after:-bottom-2.5 after:left-[20%] after:w-[60%] after:h-1 after:bg-gradient-to-r after:from-accent-cyan after:to-accent-purple after:rounded-sm">
                 Contact Me
-            </div>
+            </h2>
 
-            <div className="pb-5 pt-20 flex justify-center gap-10  sm:gap-14">
+            <div className="flex justify-center gap-10 my-12">
                 {social?.map((item, index) => (
                     <a
-                        id="social-icons"
                         key={index}
                         href={item?.link}
-                        target={item?.link ?? "_blank"}
-                        className='relative group flex row justify-center items-center'
+                        target={item?.link ? "_blank" : undefined}
+                        rel="noopener noreferrer"
+                        className='relative flex justify-center items-center no-underline w-[60px] h-[60px] rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[rgba(0,240,255,0.1)] hover:border-accent-cyan hover:shadow-[0_10px_20px_rgba(0,240,255,0.2)] group'
                     >
-                        <i
-                            className={`${item?.class} text-3xl sm:text-4xl text-[#00ffff] hover:text-[#3563ff] transition-all duration-300 hover:scale-125`}
-                        ></i>
-                        <span className="text-lg sm:text-xl capitalize text-[#00ffff] group-hover:text-lime-300 absolute bottom-5 group-hover:bottom-11 sm:group-hover:bottom-14 transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 ">
+                        <i className={`${item?.class} text-[1.8rem] text-text-primary transition-colors duration-300 group-hover:text-accent-cyan`}></i>
+                        <span className="absolute -bottom-[35px] text-[0.9rem] font-semibold text-text-primary bg-[#05050a]/90 py-1 px-3 rounded opacity-0 invisible transition-all duration-300 capitalize whitespace-nowrap border border-white/10 group-hover:opacity-100 group-hover:visible group-hover:-translate-y-1">
                             {item?.name}
                         </span>
                     </a>
@@ -52,30 +49,38 @@ export default function Contact() {
 
             <form
                 action=""
-                className="p-3 mx-auto max-w-sm sm:max-w-xl flex flex-col gap-5"
+                className="max-w-[600px] mx-auto p-10 flex flex-col gap-6 glass-panel"
             >
-                <input
-                    type="text"
-                    placeholder="Enter the name"
-                    className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
-                />
-                <input
-                    type="email"
-                    placeholder="Enter the email"
-                    className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
-                />
-                <textarea
-                    type="text"
-                    placeholder="Enter the message"
-                    className="w-full px-4 py-2 text-xl text-white border border-[#00ffff60] rounded-md bg-[#1f3b70] focus:bg-[#172d56] focus:outline-none focus:ring-2 focus:ring-[#00ffff] transition duration-300"
-                />
+                <div className="w-full">
+                    <input
+                        type="text"
+                        placeholder="Enter the name"
+                        className="w-full py-4 px-6 text-[1rem] font-inherit text-text-primary bg-white/5 border border-white/10 rounded-lg outline-none transition-all duration-300 placeholder:text-text-secondary focus:bg-white/10 focus:border-accent-cyan focus:shadow-[0_0_10px_rgba(0,240,255,0.2)]"
+                        required
+                    />
+                </div>
+                <div className="w-full">
+                    <input
+                        type="email"
+                        placeholder="Enter the email"
+                        className="w-full py-4 px-6 text-[1rem] font-inherit text-text-primary bg-white/5 border border-white/10 rounded-lg outline-none transition-all duration-300 placeholder:text-text-secondary focus:bg-white/10 focus:border-accent-cyan focus:shadow-[0_0_10px_rgba(0,240,255,0.2)]"
+                        required
+                    />
+                </div>
+                <div className="w-full">
+                    <textarea
+                        placeholder="Enter the message"
+                        className="w-full py-4 px-6 text-[1rem] font-inherit text-text-primary bg-white/5 border border-white/10 rounded-lg outline-none transition-all duration-300 placeholder:text-text-secondary focus:bg-white/10 focus:border-accent-cyan focus:shadow-[0_0_10px_rgba(0,240,255,0.2)] min-h-[150px] resize-y"
+                        required
+                    ></textarea>
+                </div>
                 <button
                     type="submit"
-                    className="border w-full py-3 text-black text-xl font-semibold bg-[#00ffff] rounded-lg"
+                    className="btn-primary w-full mt-4 text-[1.2rem] !p-4"
                 >
                     Send Message
                 </button>
             </form>
-        </div>
+        </section>
     );
 }
