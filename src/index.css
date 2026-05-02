@@ -1,5 +1,52 @@
-html {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-[#05050a] text-[#f0e2e2] overflow-x-hidden leading-relaxed;
+    font-family: 'Outfit', sans-serif;
+  }
 }
-@import "tailwindcss";
+
+/* @layer components {
+  .btn-primary {
+    @apply inline-block py-3 px-7 text-[1.1rem] font-semibold text-white bg-gradient-to-br from-[#8a2be2] to-[#00f0ff] rounded-lg cursor-pointer transition-all duration-300 no-underline shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(0,240,255,0.6)];
+  }
+
+  .btn-secondary {
+    @apply inline-block py-3 px-7 text-[1.1rem] font-semibold text-[#e2e8f0] bg-transparent border border-[#00f0ff] rounded-lg cursor-pointer transition-all duration-300 no-underline shadow-[inset_0_0_10px_rgba(0,240,255,0.1)] hover:bg-[rgba(0,240,255,0.1)] hover:-translate-y-1 hover:shadow-[inset_0_0_15px_rgba(0,240,255,0.4),0_0_15px_rgba(0,240,255,0.3)];
+  }
+
+  .glass-panel {
+    @apply bg-[rgba(255,255,255,0.03)] backdrop-blur-[12px] border border-[rgba(255,255,255,0.08)] rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #00f0ff, #ff00cc);
+  }
+  
+  .text-gradient-alt {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #8a2be2, #00f0ff);
+  }
+} */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8a2be2, #00f0ff);
+  border-radius: 5px;
+}

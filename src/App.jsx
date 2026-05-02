@@ -2,18 +2,18 @@ import About from "./Components/About/About"
 import Contact from "./Components/Contact/Contact"
 import Home from "./Components/Home/Home"
 import Navbar from "./Components/Navbar/Navbar"
-import Portfolio from "./Components/Portfolio/Portfolio"
+import Project from "./Components/Project/Project"
 
 function App() {
     return (
-        <div className="font-mono text-white overflow-hidden">
-            <div className='w-full fixed bg-[#14193f] flex justify-between z-50'>
+        <div className="font-mono bg-gradient-to-r from-[#030014] via-[#030014]/60 to-transparent text-text-primary overflow-hidden">
+            {/* <div className='w-full fixed flex justify-between z-50'> */}
                 <Navbar />
-            </div>
+            {/* </div> */}
             <main className="pt-[4rem]">
                 <Home />
                 <About />
-                <Portfolio />
+                <Project />
                 <Contact />
             </main>
         </div>
