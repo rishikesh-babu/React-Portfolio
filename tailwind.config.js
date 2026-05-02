@@ -24,6 +24,19 @@ export default {
 					border: 'rgba(255, 255, 255, 0.08)',
 				}
 			},
+			boxShadow: {
+				'cyan-glow-sm': '0 0 8px rgba(0, 240, 255, 0.5)',
+				'cyan-glow-md': '0 0 15px rgba(0, 240, 255, 0.7)',
+				'cyan-glow-lg': '0 0 25px rgba(0, 240, 255, 0.9)',
+				'cyan-glow-xl': '0 0 40px rgba(0, 240, 255, 1)',
+			},
+			dropShadow: {
+				'cyan-sm': '0 0 4px #00f0ff',
+				'cyan-md': '0 0 8px #00f0ff',
+				'cyan-lg': '0 0 15px #00f0ff',
+				'cyan-xl': '0 0 25px #00f0ff',
+				'cyan-2xl': '0 0 40px #00f0ff',
+			},
 			fontFamily: {
 				main: ['Outfit', 'sans-serif'],
 			},
