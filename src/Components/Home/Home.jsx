@@ -65,7 +65,7 @@ export default function Home() {
                 <img id='home-image' src="/profile1.jpg" alt="profile" className='size-64 border-3 border-[#00ffff] rounded-full object-cover shadow-[0px_0px_100px_#00ffff80] ' />
             </div>
             <div className='flex flex-col gap-9 sm:gap-14'>
-                <div className='flex flex-col gap-2 text-nowrap'>
+                <div className='flex flex-col gap-2 text-nowrap '>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
                     <div id='home-second' className='w-fit mx-auto text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
                     <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl font-extrabold sm:text-2xl'></span></div>

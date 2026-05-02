@@ -44,7 +44,7 @@ export default function About() {
                     className="size-60 object-cover flex justify-center items-center rounded-full border-4 border-[#00ffff] shadow-[0px_0px_100px_#00ffff80]"
                 /> */}
 
-                <div className="flex-1 mt-8 px-7 flex flex-col gap-5">
+                <div className="flex-1 mt-8 sm:px-7 flex flex-col gap-5">
                     {/* <span className="text-3xl text-[#00ffff] font-bold ">Web Developer</span> */}
                     <div className="text-lg leading-9 tracking-[1px] text-justify font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
                         Hello! My name is <i className="text-[#00ffff] font-bold">Rishikesh Babu </i>
