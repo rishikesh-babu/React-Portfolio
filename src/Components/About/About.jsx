@@ -16,7 +16,7 @@ export default function About() {
                 delay: 300,
             });
 
-            srm.reveal("#about-heading", { origin: "top" });
+            // srm.reveal("#about-heading", { origin: "top" });
             srm.reveal("#about-image", { origin: "bottom" });
         } else {
             const srd = ScrollReveal({
@@ -26,7 +26,7 @@ export default function About() {
                 delay: 300,
             });
 
-            srd.reveal("#about-heading", { origin: "top" });
+            // srd.reveal("#about-heading", { origin: "top" });
         }
     }, []);
 
