@@ -31,7 +31,7 @@ export default function About() {
     }, []);
 
     return (
-        <div id="about" className="py-10 min-h-[100vh] bg-[#243d61] ">
+        <div id="about" className="py-10 min-h-[100vh] bg-[#243d61]s ">
             <div id="about-heading" className="mb-10 text-center text-4xl text-[#00ffff] font-sans font-bold tracking-[3px] ">
                 ABOUT ME
             </div>
