@@ -111,7 +111,7 @@ export default function About() {
                 {skills.map((item, index) => (
                     <div
                         key={index}
-                        className="p-5 w-full bg-glass-bg border border-glass-border rounded-2xl hover:shadow-cyan-glow-sm transition-all duration-300"
+                        className="p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
                     >
                         <div className="mb-4 font-bold text-xl">
                             {item.heading}
@@ -121,7 +121,7 @@ export default function About() {
                             {item.skills.map((skill, skillIndex) => (
                                 <div
                                     key={skillIndex}
-                                    className="px-4 py-2 text-sm whitespace-nowrap bg-gray-900 border border-glass-border rounded-md"
+                                    className="px-4 py-2 text-sm whitespace-nowrap bg-gray-900 border border-glass-border rounded-md cursor-pointer hover:scale-110 duration-200"
                                 >
                                     {skill}
                                 </div>
