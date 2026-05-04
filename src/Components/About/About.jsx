@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
+import { Reveal } from "../../Utilities/ScrollAnimation";
 
 export default function About() {
     useEffect(() => {
@@ -109,7 +110,7 @@ export default function About() {
 
             <div className="mt-5 sm:mt-10 mx-auto p-2  max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {skills.map((item, index) => (
-                    <div
+                    <Reveal
                         key={index}
                         className="p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
                     >
@@ -127,7 +128,7 @@ export default function About() {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
         </div>
