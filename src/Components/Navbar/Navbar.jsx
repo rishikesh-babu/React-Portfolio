@@ -44,7 +44,7 @@ export default function Navbar() {
         //         </div>
         //     </section>
         // </div>
-        
+
         <div className='fixed bottom-5 left-1/2 -translate-x-1/2 z-50 py-4 px-6 bg-bg-nav border border-glass-border rounded-xl flex justify-center gap-5 sm:gap-10 '>
             {navItems?.map((item, index) => (
                 <a key={index} href={`#${item?.id}`} className={` w-12 h-12 bg-accent-cyan/10 border border-gray-800 rounded-xl hover:shadow-cyan-glow-sm hover:drop-shadow-cyan-2xl hover:scale-110 transition-all duration-300 flex justify-evenly items-center cursor-pointer`}>
