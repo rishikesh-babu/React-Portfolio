@@ -47,10 +47,10 @@ export default function Home() {
 
     useEffect(() => {
         const typed = new Typed('#home-multi-text', {
-            strings: ['Web Developer', 'Frontend Developer', 'Backend Developer'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
+            strings: ['Web Developer', 'Software Developer', 'Frontend Developer', 'Backend Developer'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            backDelay: 2000,
             loop: true
         })
         return () => {
@@ -67,14 +67,14 @@ export default function Home() {
             <div className='flex flex-col gap-9 sm:gap-14'>
                 <div className='flex flex-col gap-2 text-nowrap '>
                     <div id='home-first' className='text-xl sm:text-2xl text-center'>Hello It's me</div>
-                    <div id='home-second' className='w-fit mx-auto text-center text-3xl sm:text-4xl text-[#00ffff] font-bold '>Rishikesh Babu</div>
-                    <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-[#00ffff] text-xl font-extrabold sm:text-2xl'></span></div>
+                    <div id='home-second' className='w-fit mx-auto text-center text-3xl sm:text-4xl text-accent-cyan font-bold '>Rishikesh Babu</div>
+                    <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-accent-cyan text-xl font-extrabold sm:text-2xl'></span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
-                    <button className='px-5 py-2 text-black text-lg sm:text-2xl text-nowrap font-bold rounded-xl bg-gradient-to-r from-[#00ffff] to-[#00ff99] shadow-[0px_0px_10px_#00ffff] transition-all duration-300 hover:shadow-[0px_0px_20px_#00ffff] hover:scale-105 '>
+                    <button className='px-5 py-2 text-lg sm:text-2xl text-nowrap font-bold text-text-primary sm:text-text-secondary hover:text-text-primary bg-glass-bg border border-glass-border/20 rounded-xl select-none transition-all duration-300 hover:scale-105 active:scale-95 '>
                         Download CV
                     </button>
-                    <a href='#contact' className='px-5 py-2 text-white text-lg sm:text-2xl text-nowrap font-bold rounded-xl bg-gradient-to-r from-[#ff00cc] to-[#3333ff] shadow-[0px_0px_10px_#00ffff] transition-all duration-300 hover:shadow-[0px_0px_20px_#00ffff] hover:scale-105 '>
+                    <a href='#contact' className='px-5 py-2 font-bold text-lg sm:text-2xl text-nowrap text-gray-900 bg-accent-pink rounded-xl select-none transition-all duration-300 hover:scale-105 '>
                         Contact Info
                     </a>
                 </div>
