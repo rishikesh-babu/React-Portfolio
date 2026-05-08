@@ -1,35 +1,7 @@
 import React, { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 import { Reveal } from "../../Utilities/ScrollAnimation";
 
 export default function About() {
-    useEffect(() => {
-        const isMobile = window.innerWidth < 640;
-
-        // Clean previous reveals
-        ScrollReveal().clean('#about-heading, #about-image');
-
-        if (isMobile) {
-            const srm = ScrollReveal({
-                distance: "20px",
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
-
-            // srm.reveal("#about-heading", { origin: "top" });
-            srm.reveal("#about-image", { origin: "bottom" });
-        } else {
-            const srd = ScrollReveal({
-                distance: "50px",
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
-
-            // srd.reveal("#about-heading", { origin: "top" });
-        }
-    }, []);
 
 
     const skills = [
@@ -90,7 +62,7 @@ export default function About() {
                 ABOUT ME
             </div>
 
-            <div className="sm:mx-3 md:mx-5 lg:mx-auto px-2 py-3 sm:p-7 max-w-6xl sm: bg-bg-nav sm:border border-glass-border rounded-3xl flex flex-col lg:flex-row-reverse justify-center items-center">
+            <div className="lg:mx-auto px-2 py-3 sm:p-7 max-w-6xl sm: bg-bg-nav sm:border border-glass-border rounded-3xl flex flex-col lg:flex-row-reverse justify-center items-center">
                 {/* <img
                     id="about-image"
                     src="/profile2.jpg"
@@ -108,21 +80,26 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="mt-5 sm:mt-10 mx-auto p-2  max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className=" mt-5 sm:mt-10 mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {skills.map((item, index) => (
                     <Reveal
                         key={index}
-                        className="p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
+                        className="group relative p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
                     >
-                        <div className="mb-4 font-bold text-xl">
+                        {/* Glow Effect */}
+                        <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10' />
+
+                        {/* Heading */}
+                        <div className="mb-4 font-bold text-xl group-hover:text-accent-cyan">
                             {item.heading}
                         </div>
 
-                        <div className="flex flex-wrap gap-3">
+                        {/* Skills */}
+                        <div className="relative z-10 flex flex-wrap gap-3">
                             {item.skills.map((skill, skillIndex) => (
                                 <div
                                     key={skillIndex}
-                                    className="px-4 py-2 text-sm whitespace-nowrap bg-gray-900 border border-glass-border rounded-md cursor-pointer hover:scale-110 duration-200"
+                                    className="px-4 py-2 text-sm whitespace-nowrap bg-gray-900 border border-glass-border rounded-md cursor-pointer hover:scale-110 active:scale-95 duration-200"
                                 >
                                     {skill}
                                 </div>

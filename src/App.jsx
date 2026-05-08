@@ -10,7 +10,7 @@ function App() {
             {/* <div className='w-full fixed flex justify-between z-50'> */}
                 <Navbar />
             {/* </div> */}
-            <main className="pt-[4rem]">
+            <main className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
                 <Home />
                 <About />
                 <Project />
