@@ -1,36 +1,6 @@
-import React, { useEffect } from 'react'
-import ScrollReveal from 'scrollreveal';
+import React from 'react'
 
 export default function Project() {
-    useEffect(() => {
-        const isMobile = window.innerWidth < 640;
-
-        // Clean previous reveals
-        ScrollReveal().clean('#portfolio-heading, #portfolio-project');
-
-        if (isMobile) {
-            const srm = ScrollReveal({
-                distance: '20px',
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
-
-            srm.reveal('#portfolio-heading', { origin: 'top' })
-            srm.reveal('#portfolio-project', { origin: 'bottom' })
-        } else {
-            const srd = ScrollReveal({
-                distance: '40px',
-                duration: 1000,
-                reset: true,
-                delay: 300,
-            });
-
-            srd.reveal('#portfolio-heading', { origin: 'top' })
-            srd.reveal('#portfolio-project', { origin: 'bottom' })
-        }
-    }, [])
-
     const projects = [
         {
             image: '/food-express.png',
