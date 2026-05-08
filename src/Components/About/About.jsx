@@ -87,7 +87,7 @@ export default function About() {
                         className="group relative p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
                     >
                         {/* Glow Effect */}
-                        <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10' />
+                        <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10 rounded-2xl' />
 
                         {/* Heading */}
                         <div className="mb-4 font-bold text-xl group-hover:text-accent-cyan">

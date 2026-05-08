@@ -39,7 +39,7 @@ export default function Project() {
             name: 'Login Demo',
             description: 'Firebase authentication demo with secure login and signup system.',
             github: 'https://github.com/rishikesh-babu/Firebase-Sample.git',
-            live: 'https://firebase-login-o2pi.onrender.com/login',
+            live: 'https://firebase-login-o2pi.onrender.com',
             stack: ['React', 'Firebase', 'Authentication']
         }
     ]

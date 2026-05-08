@@ -60,7 +60,7 @@ export default function Home() {
     }, [])
 
     return (
-        <div id='home' className='min-h-[85dvh] bg-[#172342]f flex flex-col sm:flex-row items-center sm:justify-evenly gap-10'>
+        <div className=' min-h-[100dvh] bg-[#172342]f flex flex-col sm:flex-row items-center sm:justify-evenly gap-10'>
             <div id="home-image-container">
                 <img id='home-image' src="/profile1.jpg" alt="profile" className='size-64 border-3 border-[#00ffff] rounded-full object-cover shadow-[0px_0px_100px_#00ffff80] ' />
             </div>

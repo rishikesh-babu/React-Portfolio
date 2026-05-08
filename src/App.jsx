@@ -7,10 +7,8 @@ import Project from "./Components/Project/Project"
 function App() {
     return (
         <div className="font-mono bg-gradient-to-r from-[#030014] via-[#030014]/60 to-transparent text-text-primary overflow-hidden">
-            {/* <div className='w-full fixed flex justify-between z-50'> */}
-                <Navbar />
-            {/* </div> */}
-            <main className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
+            <Navbar />
+            <main id="home" className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
                 <Home />
                 <About />
                 <Project />
