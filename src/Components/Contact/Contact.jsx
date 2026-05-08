@@ -55,7 +55,7 @@ export default function Contact() {
             {/* Form */}
             <div className=' group relative mx-auto max-w-4xl '>
                 {/* Glow Effect */}
-                {/* <div className='absolute  inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10 rounded-2xl' /> */}
+                <div className='absolute  inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10 rounded-2xl' />
 
                 <form className="relative z-10 p-6 sm:p-10 bg-glass-bg border border-glass-border rounded-2xl flex flex-col gap-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
