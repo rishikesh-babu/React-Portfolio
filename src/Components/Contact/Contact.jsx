@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
     const social = [
@@ -29,6 +30,31 @@ export default function Contact() {
         },
     ]
 
+    const formRef = useRef(null)
+    const [status, setStatus] = useState('idle') // idle, sending, success, error
+
+    function sentEmail(e) {
+        e.preventDefault()
+        setStatus('sending')
+
+        emailjs.sendForm(
+            import.meta.env.VITE_SERVICE_ID,
+            import.meta.env.VITE_TEMPLATE_ID,
+            formRef.current,
+            import.meta.env.VITE_PUBLIC_KEY
+        )
+            .then((result) => {
+                console.log(result)
+                setStatus('success')
+                e.target.reset()
+                setTimeout(() => setStatus('idle'), 5000)
+            }, (error) => {
+                console.log(error)
+                setStatus('error')
+                setTimeout(() => setStatus('idle'), 5000)
+            });
+    }
+
     return (
         <div id="contact" className="min-h-[100dvh] pt-10 pb-32">
             <div className="text-5xl text-center font-bold tracking-tight mb-4">
@@ -42,10 +68,10 @@ export default function Contact() {
             <div className="pb-5 pt-5 flex justify-center gap-10  sm:gap-14">
                 {social?.map((item, index) => (
                     <a
-                        id="social-icons"
                         key={index}
                         href={item?.link}
-                        target={item?.link ?? "_blank"}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className='relative group flex row justify-center items-center'
                     >
                         <i className={`${item?.class} text-3xl sm:text-4xl text-accent-cyan hover:text-accent-pink transition-all duration-300 hover:scale-125`} />
@@ -62,7 +88,7 @@ export default function Contact() {
                 {/* Glow Effect */}
                 <div className='absolute  inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10 rounded-2xl' />
 
-                <form className="relative z-10 p-6 sm:p-10 bg-glass-bg border border-glass-border rounded-2xl flex flex-col gap-8">
+                <form ref={formRef} onSubmit={sentEmail} className="relative z-10 p-6 sm:p-10 bg-glass-bg border border-glass-border rounded-2xl flex flex-col gap-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <Input label="Name" type="text" name="name" />
                         <Input label="Email" type="email" name="email" />
@@ -81,10 +107,25 @@ export default function Contact() {
                         ></textarea>
                     </div>
 
-                    <div className="flex justify-end pt-2">
-                        <button type="submit" className="group/button w-fit md:w-auto px-10 py-4 bg-glass-bg border border-glass-border rounded-2xl flex items-center justify-center gap-2 ">
-                            <span>Send Message</span>
-                            <i className="fas fa-paper-plane text-sm transition-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-1" />
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-2">
+                        {status === 'success' && (
+                            <span className="text-green-400 font-medium animate-pulse">
+                                Message sent successfully!
+                            </span>
+                        )}
+                        {status === 'error' && (
+                            <span className="text-red-400 font-medium">
+                                Failed to send message. Please try again.
+                            </span>
+                        )}
+                        <div className="flex-1" />
+                        <button
+                            type="submit"
+                            disabled={status === 'sending'}
+                            className="group/button w-full md:w-auto px-10 py-4 bg-glass-bg border border-glass-border rounded-2xl flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
+                            <i className={`fas ${status === 'sending' ? 'fa-spinner fa-spin' : 'fa-paper-plane'} text-sm transition-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-1`} />
                         </button>
                     </div>
                 </form>
