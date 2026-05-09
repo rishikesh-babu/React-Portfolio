@@ -30,7 +30,7 @@ export default function Home() {
                     reset: true,
                     delay: 300,
                 });
-    
+
                 srd.reveal("#home-image-container", { origin: "left" });
                 srd.reveal("#home-buttons", { origin: "bottom" });
                 srd.reveal("#home-first, #home-third", { origin: "left" });
@@ -71,9 +71,14 @@ export default function Home() {
                     <div id='home-third' className='text-xl sm:text-2xl text-center '>And I'm a <span id='home-multi-text' className='text-accent-cyan text-xl font-extrabold sm:text-2xl'></span></div>
                 </div>
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
-                    <button className='px-5 py-2 text-lg sm:text-2xl text-nowrap font-bold text-text-primary sm:text-text-secondary hover:text-text-primary bg-glass-bg border border-glass-border/20 rounded-xl select-none transition-all duration-300 hover:scale-105 active:scale-95 '>
+                    <a
+                        className='px-5 py-2 text-lg sm:text-2xl text-nowrap font-bold text-text-primary sm:text-text-secondary hover:text-text-primary bg-glass-bg border border-glass-border/20 rounded-xl select-none transition-all duration-300 hover:scale-105 active:scale-95 '
+                        href="https://docs.google.com/document/d/1M0xoeiwIrmgAIps-LspZJUjctoiq2222l8px387aEbo/preview"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Download CV
-                    </button>
+                    </a>
                     <a href='#contact' className='px-5 py-2 font-bold text-lg sm:text-2xl text-nowrap text-gray-900 bg-accent-pink rounded-xl select-none transition-all duration-300 hover:scale-105 '>
                         Contact Info
                     </a>
