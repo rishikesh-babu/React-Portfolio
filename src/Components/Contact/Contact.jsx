@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
     const social = [
@@ -32,27 +33,36 @@ export default function Contact() {
 
     const formRef = useRef(null)
     const [status, setStatus] = useState('idle') // idle, sending, success, error
+    const [error, setError] = useState(null)
 
     function sentEmail(e) {
         e.preventDefault()
         setStatus('sending')
 
-        emailjs.sendForm(
-            import.meta.env.VITE_SERVICE_ID,
-            import.meta.env.VITE_TEMPLATE_ID,
-            formRef.current,
-            import.meta.env.VITE_PUBLIC_KEY
+        toast.promise(
+            emailjs.sendForm(
+                import.meta.env.VITE_SERVICE_ID,
+                import.meta.env.VITE_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_PUBLIC_KEY
+            )
+                .then((result) => {
+                    console.log(result)
+                    toast.success('Successfully sent the message')
+                    setStatus('success')
+                    e.target.reset()
+                    setTimeout(() => setStatus('idle'), 13000)
+                }, (error) => {
+                    console.log("Error", error.text)
+                    toast.error('Failed to send the message')
+                    setStatus('error')
+                    setError(error?.text)
+                    setTimeout(() => setStatus('idle'), 13000)
+                }),
+            {
+                loading: 'Please wait...'
+            }
         )
-            .then((result) => {
-                console.log(result)
-                setStatus('success')
-                e.target.reset()
-                setTimeout(() => setStatus('idle'), 5000)
-            }, (error) => {
-                console.log(error)
-                setStatus('error')
-                setTimeout(() => setStatus('idle'), 5000)
-            });
     }
 
     return (
@@ -115,7 +125,8 @@ export default function Contact() {
                         )}
                         {status === 'error' && (
                             <span className="text-red-400 font-medium">
-                                Failed to send message. Please try again.
+                                Failed to send message. Please try again. <br />
+                                {error}
                             </span>
                         )}
                         <div className="flex-1" />

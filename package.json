@@ -15,6 +15,7 @@
     "lucide-react": "^1.14.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.6.0",
     "scrollreveal": "^4.0.9",
     "typed.js": "^2.1.0"
   },
