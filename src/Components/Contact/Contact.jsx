@@ -25,7 +25,9 @@ export default function Contact() {
             name: 'instagram',
         },
         {
-            link: 'https://mail.google.com/mail/?view=cm&fs=1&to=rishikeshbabu2004@gmail.com',
+            link: /Mobi|Android/i.test(navigator.userAgent)
+                ? 'mailto:rishikeshbabu2004@gmail.com'
+                : 'https://mail.google.com/mail/?view=cm&fs=1&to=rishikeshbabu2004@gmail.com',
             class: 'fas fa-envelope',
             name: 'email',
         },
