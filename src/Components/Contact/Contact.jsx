@@ -22,6 +22,11 @@ export default function Contact() {
             class: 'fab fa-instagram',
             name: 'instagram',
         },
+        {
+            link: 'https://mail.google.com/mail/?view=cm&fs=1&to=rishikeshbabu2004@gmail.com',
+            class: 'fas fa-envelope',
+            name: 'email',
+        },
     ]
 
     return (
