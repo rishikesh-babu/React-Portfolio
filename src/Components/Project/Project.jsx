@@ -12,7 +12,7 @@ export default function Project() {
         {
             name: 'ChatLy',
             description: 'A real time chat application using MERN stack and socket.io with private messaging feature',
-            github: 'https://github.com/rishikesh-babu/Real-Time-Chat.git',
+            github: 'https://github.com/rishikesh-babu/ChatLy.git',
             live: 'https://real-time-chat-fite.onrender.com/',
             stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'TailwindCSS']
         },
