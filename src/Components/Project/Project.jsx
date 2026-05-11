@@ -3,7 +3,7 @@ import React from 'react'
 export default function Project() {
     const projects = [
         {
-            name: 'Chat Application',
+            name: 'ChatLy',
             description: 'A real time chat application using MERN stack and socket.io with private messaging feature',
             github: 'https://github.com/rishikesh-babu/Real-Time-Chat.git',
             live: 'https://real-time-chat-fite.onrender.com/',
