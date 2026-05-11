@@ -3,6 +3,13 @@ import React from 'react'
 export default function Project() {
     const projects = [
         {
+            name: 'ASL Translator',
+            description: 'A web application that translates American Sign Language to text and vice versa.',
+            github: 'https://github.com/Renet-Reji/Sign-Language-Translator.git',
+            live: 'https://asl-translator-rvzx.onrender.com/',
+            stack: ['React', 'Flask', 'Python', 'NumPy', 'MediaPipe', 'OpenCV']
+        },
+        {
             name: 'ChatLy',
             description: 'A real time chat application using MERN stack and socket.io with private messaging feature',
             github: 'https://github.com/rishikesh-babu/Real-Time-Chat.git',
