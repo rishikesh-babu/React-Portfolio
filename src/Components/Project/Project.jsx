@@ -3,11 +3,11 @@ import React from 'react'
 export default function Project() {
     const projects = [
         {
-            name: 'ASL Translator',
-            description: 'A web application that translates American Sign Language to text and vice versa.',
-            github: 'https://github.com/Renet-Reji/Sign-Language-Translator.git',
-            live: 'https://asl-translator-rvzx.onrender.com/',
-            stack: ['React', 'Flask', 'Python', 'NumPy', 'MediaPipe', 'OpenCV']
+            name: 'Food Express',
+            description: 'Full-stack food ordering platform with online payments and admin management.',
+            github: 'https://github.com/rishikesh-babu/Food-Ordering-Website.git',
+            live: 'https://food-express-frontend-yyuz.onrender.com/',
+            stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe']
         },
         {
             name: 'ChatLy',
@@ -15,6 +15,20 @@ export default function Project() {
             github: 'https://github.com/rishikesh-babu/ChatLy.git',
             live: 'https://real-time-chat-fite.onrender.com/',
             stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'TailwindCSS']
+        },
+        {
+            name: 'ASL Translator',
+            description: 'A web application that translates American Sign Language to text and vice versa.',
+            github: 'https://github.com/Renet-Reji/Sign-Language-Translator.git',
+            live: 'https://asl-translator-rvzx.onrender.com/',
+            stack: ['React', 'Flask', 'Python', 'NumPy', 'MediaPipe', 'OpenCV']
+        },
+        {
+            name: 'SpaceX',
+            description: 'Built a responsive SpaceX web application using the SpaceX API to display launches, rockets, missions, and other space-related data with a modern and interactive user interface.',
+            github: 'https://github.com/rishikesh-babu/SpaceX.git',
+            live: 'https://spacex-y7rf.onrender.com/',
+            stack: ['React', 'TailwindCSS', 'SpaceX API']
         },
         {
             name: 'Browser Extension Frontend Challenge',
@@ -31,25 +45,11 @@ export default function Project() {
             stack: ['React', 'TailwindCSS', 'Gemini API']
         },
         {
-            name: 'SpaceX',
-            description: 'Built a responsive SpaceX web application using the SpaceX API to display launches, rockets, missions, and other space-related data with a modern and interactive user interface.',
-            github: 'https://github.com/rishikesh-babu/SpaceX.git',
-            live: 'https://spacex-y7rf.onrender.com/',
-            stack: ['React', 'TailwindCSS', 'SpaceX API']
-        },
-        {
             name: 'EduVerse',
             description: 'Offline-first AI education platform. Ensures learning continuity in low-connectivity areas using PWA technologies.',
             github: 'https://github.com/rishikesh-babu/EduVerse.git',
             live: 'https://eduverse-a60j.onrender.com/',
             stack: ['React', 'Node.js', 'Express', 'MongoDB', 'ML']
-        },
-        {
-            name: 'Food Express',
-            description: 'Full-stack food ordering platform with online payments and admin management.',
-            github: 'https://github.com/rishikesh-babu/Food-Ordering-Website.git',
-            live: 'https://food-express-frontend-yyuz.onrender.com/',
-            stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe']
         },
         {
             name: 'PlanIt',
