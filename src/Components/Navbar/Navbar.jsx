@@ -21,7 +21,7 @@ export default function Navbar() {
                         <item.icon className=" text-accent-cyan drop-shadow-cyan-xl" />
                     </a>
 
-                    <span className="absolute px-3 py-1 font-bold tracking-wide text-lg sm:text-xl capitalize text-accent-pink bottom-5 group-hover:bottom-[70px] transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 bg-bg-nav/50 backdrop-blur-sm border border-glass-border rounded-md pointer-events-none whitespace-nowrap">
+                    <span className="absolute px-3 py-1 font-bold tracking-wide text-lg sm:text-xl capitalize text-accent-pink bottom-5 group-hover:bottom-[70px] transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 bg-glass-bg backdrop-blur-sm border border-glass-border rounded-md pointer-events-none whitespace-nowrap">
                         {item?.label}
                     </span>
                 </div>

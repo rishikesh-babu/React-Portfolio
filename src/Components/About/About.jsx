@@ -59,13 +59,13 @@ export default function About() {
                 ABOUT ME
             </div>
 
-            <div className="lg:mx-auto px-2 py-3 sm:p-7 max-w-6xl bg-glass-bg backdrop-blur-sm sm:border border-glass-border rounded-3xl flex flex-col lg:flex-row-reverse justify-center items-center">
+            <div className="mb-3 lg:mx-auto px-2 py-3 sm:p-7 max-w-6xl bg-glass-bg backdrop-blur-sm border border-glass-border rounded-3xl flex flex-col lg:flex-row-reverse justify-center items-center">
                 <span className="text-lg leading-9 tracking-[1px] text-justify font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
                     Hi, I'm Rishikesh Babu, a passionate Full Stack Developer skilled in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I enjoy building responsive and user-friendly web applications while continuously expanding my expertise in both frontend and backend development. I also have a growing interest in AI and Machine Learning, exploring how intelligent systems can enhance digital experiences. I'm committed to learning new technologies, strengthening my problem-solving skills, and creating impactful software solutions.
                 </span>
             </div>
 
-            <div className="  sm:mt-10 mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="  sm:mt-6 mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {skills.map((item, index) => (
                     <Reveal
                         key={index}
