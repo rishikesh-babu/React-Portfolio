@@ -8,17 +8,18 @@ import ParticleBackground from "./Animation/ParticleBackground"
 
 function App() {
     return (
-        // <div className="font-mono bg-gradient-to-r from-[#030014] via-[#030014]/60 to-transparent text-text-primary overflow-hidden">
-        <div className=" relative">
+        <div className="relative min-h-screen text-text-primary">
             <ParticleBackground />
-            <Toaster position="top-center" />
-            <Navbar />
-            <main id="home" className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
-                <Home />
-                <About />
-                <Project />
-                <Contact />
-            </main>
+            <div className="relative z-10">
+                <Toaster position="top-center" />
+                <Navbar />
+                <main id="home" className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
+                    <Home />
+                    <About />
+                    <Project />
+                    <Contact />
+                </main>
+            </div>
         </div>
     )
 }

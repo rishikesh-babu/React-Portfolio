@@ -62,7 +62,7 @@ export default function ParticleBackground() {
     );
 
     return (
-        <div className="absolute inset-0 -z-10 w-full h-full">
+        <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
             <Particles
                 id="tsparticles"
                 options={options}
