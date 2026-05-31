@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
 import { Reveal } from "../../Utilities/ScrollAnimation";
 
 export default function About() {
-
-
     const skills = [
         {
             heading: "Frontend",
@@ -71,12 +68,7 @@ export default function About() {
                 /> */}
 
                 <div className="text-lg leading-9 tracking-[1px] text-justify font-['Segoe_UI','Tahoma','Geneva','Verdana','sans-serif']">
-                    Hello! My name is <i className="text-accent-cyan font-bold">Rishikesh Babu </i>
-                    and I am a passionate Full Stack Developer with strong skills in modern web technologies, including HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I enjoy building responsive, efficient, and user-friendly applications while continuously improving my understanding of both frontend and backend development.
-                    Alongside web development, I have a growing interest in Artificial Intelligence and Machine Learning
-                    I am particularly interested in how intelligent systems can enhance user experiences and bring more value to applications.
-                    I enjoy learning new technologies, improving my problem-solving abilities, and staying updated with the latest technologies.
-                    My goal is to combine these skills to create smarter, more impactful digital solutions while continuously evolving as a developer.
+                    Hi, I'm Rishikesh Babu, a passionate Full Stack Developer skilled in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I enjoy building responsive and user-friendly web applications while continuously expanding my expertise in both frontend and backend development. I also have a growing interest in AI and Machine Learning, exploring how intelligent systems can enhance digital experiences. I'm committed to learning new technologies, strengthening my problem-solving skills, and creating impactful software solutions.
                 </div>
             </div>
 
