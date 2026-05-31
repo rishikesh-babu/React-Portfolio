@@ -88,7 +88,7 @@ export default function Contact() {
                     >
                         <i className={`${item?.class} text-3xl sm:text-4xl text-accent-cyan hover:text-accent-pink transition-all duration-300 hover:scale-125`} />
 
-                        <span className="text-lg sm:text-xl capitalize text-accent-cyan group-hover:text-accent-pink absolute bottom-5 group-hover:bottom-11 sm:group-hover:bottom-14 transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 ">
+                        <span className="absolute text-lg sm:text-xl capitalize text-accent-cyan group-hover:text-accent-pink bottom-5 group-hover:bottom-11 sm:group-hover:bottom-14 transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 ">
                             {item?.name}
                         </span>
                     </a>
