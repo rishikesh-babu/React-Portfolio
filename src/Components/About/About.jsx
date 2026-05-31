@@ -76,7 +76,7 @@ export default function About() {
                 {skills.map((item, index) => (
                     <Reveal
                         key={index}
-                        className="group relative p-5 w-full bg-glass-bg hover:bg-glass-bg/5 border border-glass-border rounded-2xl transition-all duration-300"
+                        className="group relative p-5 w-full bg-glass-bg hover:bg-glass-bg/5 backdrop-blur-sm border border-glass-border rounded-2xl transition-all duration-300"
                     >
                         {/* Glow Effect */}
                         <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10 rounded-2xl' />

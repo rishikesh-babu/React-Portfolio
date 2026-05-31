@@ -112,7 +112,7 @@ export default function Project() {
                 {projects?.map((item, index) => (
                     <div
                         key={index}
-                        className="group relative w-full overflow-hidden rounded-3xl border border-glass-border bg-glass-bg backdrop-blur-xl transition-all duration-500 hover:shadow-cyan-glow-sm "
+                        className="group relative w-full overflow-hidden rounded-3xl border border-glass-border bg-glass-bg backdrop-blur-sm transition-all duration-500 hover:shadow-cyan-glow-sm "
                     >
                         {/* Glow Effect */}
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-accent-cyan/10 via-transparent to-accent-purple/10" />

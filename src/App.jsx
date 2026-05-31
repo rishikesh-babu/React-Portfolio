@@ -4,10 +4,13 @@ import Contact from "./Components/Contact/Contact"
 import Home from "./Components/Home/Home"
 import Navbar from "./Components/Navbar/Navbar"
 import Project from "./Components/Project/Project"
+import ParticleBackground from "./Animation/ParticleBackground"
 
 function App() {
     return (
-        <div className="font-mono bg-gradient-to-r from-[#030014] via-[#030014]/60 to-transparent text-text-primary overflow-hidden">
+        // <div className="font-mono bg-gradient-to-r from-[#030014] via-[#030014]/60 to-transparent text-text-primary overflow-hidden">
+        <div className=" relative">
+            <ParticleBackground />
             <Toaster position="top-center" />
             <Navbar />
             <main id="home" className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
