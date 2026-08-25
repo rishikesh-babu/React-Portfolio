@@ -5,13 +5,13 @@ export default function Navbar() {
     const navItems = [
         { id: "home", label: "Home", icon: Home },
         { id: "about", label: "About", icon: User },
-        // { id: "experience", label: "Experience", icon: Briefcase },
+        { id: "experience", label: "Experience", icon: Briefcase },
         { id: "portfolio", label: "Projects", icon: Code },
         { id: "contact", label: "Contact", icon: Mail },
     ];
 
     return (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 py-4 px-6 bg-bg-nav border border-glass-border rounded-xl flex justify-center gap-5 sm:gap-10 ">
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 max-w-[95%] sm:max-w-fit py-4 px-6 bg-bg-nav border border-glass-border rounded-xl flex justify-center gap-5 sm:gap-10 ">
             {navItems?.map((item, index) => (
                 <div key={index} className="relative group flex flex-col items-center">
                     <a
@@ -21,7 +21,7 @@ export default function Navbar() {
                         <item.icon className=" text-accent-cyan drop-shadow-cyan-xl" />
                     </a>
 
-                    <span className="absolute px-3 py-1 font-bold tracking-wide text-lg sm:text-xl capitalize text-accent-pink bottom-5 group-hover:bottom-[70px] transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 bg-bg-nav/50 backdrop-blur-sm border border-glass-border rounded-md pointer-events-none whitespace-nowrap">
+                    <span className="absolute px-3 py-1 font-bold tracking-wide text-lg sm:text-xl capitalize text-accent-pink bottom-5 group-hover:bottom-[70px] transition-all duration-300 delay-[50ms] opacity-0 group-hover:opacity-100 bg-glass-bg backdrop-blur-sm border border-glass-border rounded-md pointer-events-none whitespace-nowrap">
                         {item?.label}
                     </span>
                 </div>

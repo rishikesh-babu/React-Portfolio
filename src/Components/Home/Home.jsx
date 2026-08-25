@@ -73,7 +73,7 @@ export default function Home() {
                 <div id='home-buttons' className='flex justify-around gap-4 select-none'>
                     <a
                         className='px-5 py-2 text-lg sm:text-2xl text-nowrap font-bold text-text-primary sm:text-text-secondary hover:text-text-primary bg-glass-bg border border-glass-border/20 rounded-xl select-none transition-all duration-300 hover:scale-105 active:scale-95 '
-                        href="https://docs.google.com/document/d/1M0xoeiwIrmgAIps-LspZJUjctoiq2222l8px387aEbo/preview"
+                        href='https://drive.google.com/file/d/127WSGM4pC4CON3nFhTTwbxVTI1IskMkh/view?usp=drive_link'
                         target="_blank"
                         rel="noopener noreferrer"
                     >
