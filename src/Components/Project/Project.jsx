@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, UpReveal } from '../../Utilities/ScrollAnimation';
 
 export default function Project() {
     const projects = [
@@ -101,16 +102,16 @@ export default function Project() {
 
     return (
         <div id="portfolio" className="py-10 min-h-screen">
-            <div
+            <UpReveal
                 id="portfolio-heading"
                 className="mb-10 text-center text-4xl text-accent-cyan font-sans font-bold tracking-[3px] "
             >
                 Projects
-            </div>
+            </UpReveal>
 
             <div className="font-main mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
                 {projects?.map((item, index) => (
-                    <div
+                    <Reveal
                         key={index}
                         className="group relative w-full overflow-hidden rounded-3xl border border-glass-border bg-glass-bg backdrop-blur-sm transition-all duration-500 hover:shadow-cyan-glow-sm "
                     >
@@ -134,7 +135,7 @@ export default function Project() {
                                 {item?.stack?.map((stackItem, index) => (
                                     <span
                                         key={index}
-                                        className="px-3 py-1 rounded-full text-xs font-medium text-accent-cyan border border-accent-cyan/20 bg-accent-cyan/10 backdrop-blur-md shadow-cyan-glow-sm hover:scale-105 active:scale-95 cursor-pointer "
+                                        className="px-3 py-1 rounded-full text-xs font-medium text-accent-cyan border border-accent-cyan/20 bg-accent-cyan/10 backdrop-blur-md shadow-cyan-glow-sm hover:scale-105 active:scale-95 cursor-pointer select-none"
                                     >
                                         {stackItem}
                                     </span>
@@ -162,7 +163,7 @@ export default function Project() {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
         </div>

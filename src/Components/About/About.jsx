@@ -54,7 +54,7 @@ export default function About() {
     ];
 
     return (
-        <div id="about" className="py-10 min-h-[100vh] bg-[#243d61]s ">
+        <div id="about" className="py-10 min-h-[100vh] ">
             <div id="about-heading" className="mb-10 text-center text-4xl text-accent-cyan font-sans font-bold tracking-[3px] ">
                 ABOUT ME
             </div>
@@ -65,7 +65,7 @@ export default function About() {
                 </span>
             </div>
 
-            <div className="  sm:mt-6 mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className=" sm:mt-6 mx-auto max-w-6xl grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {skills.map((item, index) => (
                     <Reveal
                         key={index}

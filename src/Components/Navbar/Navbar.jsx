@@ -5,13 +5,13 @@ export default function Navbar() {
     const navItems = [
         { id: "home", label: "Home", icon: Home },
         { id: "about", label: "About", icon: User },
-        // { id: "experience", label: "Experience", icon: Briefcase },
+        { id: "experience", label: "Experience", icon: Briefcase },
         { id: "portfolio", label: "Projects", icon: Code },
         { id: "contact", label: "Contact", icon: Mail },
     ];
 
     return (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 py-4 px-6 bg-bg-nav border border-glass-border rounded-xl flex justify-center gap-5 sm:gap-10 ">
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 max-w-[95%] sm:max-w-fit py-4 px-6 bg-bg-nav border border-glass-border rounded-xl flex justify-center gap-5 sm:gap-10 ">
             {navItems?.map((item, index) => (
                 <div key={index} className="relative group flex flex-col items-center">
                     <a

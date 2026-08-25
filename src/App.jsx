@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home"
 import Navbar from "./Components/Navbar/Navbar"
 import Project from "./Components/Project/Project"
 import ParticleBackground from "./Animation/ParticleBackground"
+import Experience from "./Components/Experience/Experience"
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <main id="home" className="pt-[4rem] px-1 sm:px-2 md:px-3 ">
                     <Home />
                     <About />
+                    <Experience />
                     <Project />
                     <Contact />
                 </main>
