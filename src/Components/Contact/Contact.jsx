@@ -73,7 +73,7 @@ export default function Contact() {
                 <span className="text-accent-cyan">Contact Me</span>
             </div>
 
-            <div className='mb-12 text-center text-text-secondary text-lg max-w-lg mx-auto'>
+            <div className='mb-12 text-center font-mono text-text-secondary text-lg max-w-lg mx-auto'>
                 Let’s build something amazing together. Reach out for collaborations or just a friendly hello!
             </div>
 
